@@ -38,7 +38,7 @@ fun DiceeApp() {
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun DiceePreview() {
     DiceeTheme {
         DiceeApp()
     }
