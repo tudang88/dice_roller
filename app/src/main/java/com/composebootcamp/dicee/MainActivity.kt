@@ -8,7 +8,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -36,7 +35,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    DiceeApp(Modifier)
+                    DiceeApp()
                 }
             }
         }
@@ -44,7 +43,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun DiceeApp(modifier: Modifier = Modifier) {
+fun DiceeApp() {
     val lastNumber = remember{
         mutableStateOf(1)
     }
