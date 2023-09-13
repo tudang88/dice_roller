@@ -8,9 +8,15 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -62,9 +68,10 @@ fun DiceeApp() {
        Text(text = "Your Number:" + lastNumber.value)
        Image(painter = painterResource(id = diceImageResource), contentDescription = "dice image")
        Text(text = "Roll", modifier = Modifier
-           .background(Color.Green, shape = RoundedCornerShape(5.dp)).padding(10.dp)
+           .padding(20.dp) // this padding works as a margin
+           .background(Color.LightGray, shape = RoundedCornerShape(5.dp))
+           .padding(10.dp) // this padding works as normal padding in xml
            .clickable { lastNumber.value = (1..6).random() }
-
        )
    }
 }
