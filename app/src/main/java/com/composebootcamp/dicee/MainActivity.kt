@@ -44,6 +44,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun DiceeApp() {
+    // save the state by using remember keyword and mutableStateOf()
     val lastNumber = remember{
         mutableStateOf(1)
     }
